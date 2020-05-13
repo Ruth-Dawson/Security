@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- 页面缩放                          设备宽度     设置页面的初始缩放值 是否允许用户进行缩放 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 删除苹果默认的工具栏和菜单栏 -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <!-- 苹果工具栏颜色 -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <!-- X-UA-Compatible 指定网页的兼容性模式设置IE8以下不识别 以IE的最高版本来显示 chrome=1 如果有chrome的话优先展示chrome 360 -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- 指定双核浏览器默认以何种方式渲染页面[webkit]极速核[ie-comp]ie兼容内核[ie-stand]ie标准内核 -->
+    <meta name="renderer" content="webkit" />
+    <link rel="stylesheet" href="../static/css/normalize.css" />
+    <link rel="stylesheet" href="../static/css/font.css" />
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../static/css/bootstrap-table.min.css" />
+    <!-- timeline.css -->
+    <link rel="stylesheet" href="../static/css/timeline-default.css" />
+    <link rel="stylesheet" href="../static/css/timeline-style.css" />
+    <!-- style css -->
+    <link rel="stylesheet" href="../static/css/common.css" />
+    <link rel="stylesheet" href="../static/css/security.css" />
+    <title>享清福安全监管</title>
+  </head>
+
+  <body>
+    <div id="security_container" class="container-fluid w-100 h-100">
+      <!-- header -->
+      <div class="row header">
+        <div class="col-9 header-left align-self-center">
+          <a href="javascript:;">
+            <h1 class="header-name text-left">
+              享清福<span class="logo">®</span>智慧养老安全监管平台
+            </h1>
+          </a>
+        </div>
+        <div class="col-3 header-right pl-0">
+          <ul class="list-unstyled right_menu">
+            <li class="list-inline-item float-left active">
+              <a
+                href="javascript:;"
+                class="li-menu align-items-center justify-content-left"
+              >
+                <span class="ic-contain"><i class="iconfont">&#xe626;</i></span
+                ><span>安全监管</span></a
+              >
+            </li>
+            <li class="list-inline-item float-left">
+              <a
+                href="reportor.html"
+                class="li-menu align-items-center justify-content-left"
+              >
+                <span class="ic-contain"><i class="iconfont">&#xe605;</i></span>
+                <span>数据报表</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- content -->
+      <div class="row content px-0">
+        <!-- left -->
+        <div class="col-9 content-left grap h-100">
+          <div class="row grap-iframe">
+            <iframe
+              src="security_iframe.html"
+              frameborder="0"
+              class="w-100"
+              id="secIframe"
+            >
+            </iframe>
+          </div>
+          <div class="row grap-stations">
+            <!-- 站点时间线 -->
+            <div class="stations w-100 htmleaf-container">
+              <div class="cd-horizontal-timeline h-100">
+                <div class="timeline">
+                  <div class="events-wrapper">
+                    <div class="events">
+                      <ul class="list-unstyled mb-0">
+                        <li>
+                          <a
+                            href="javascript:;"
+                            data-date=""
+                            onclick="changeStation(1)"
+                            >洪武1</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="javascript:;"
+                            data-date=""
+                            onclick="changeStation(2)"
+                            >洪武2</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="javascript:;"
+                            data-date=""
+                            onclick="changeStation(3)"
+                            >洪武3</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="javascript:;"
+                            data-date=""
+                            onclick="changeStation(4)"
+                            >洪武4</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="javascript:;"
+                            data-date=""
+                            onclick="changeStation(5)"
+                            >洪武5</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="javascript:;"
+                            data-date=""
+                            onclick="changeStation(6)"
+                            >洪武6</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="javascript:;"
+                            data-date=""
+                            onclick="changeStation(7)"
+                            >淮海7</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="javascript:;"
+                            data-date=""
+                            onclick="changeStation(8)"
+                            >淮海8</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="javascript:;"
+                            data-date=""
+                            onclick="changeStation(9)"
+                            >淮海9</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="javascript:;"
+                            data-date=""
+                            onclick="changeStation(10)"
+                            >淮海10</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="javascript:;"
+                            data-date=""
+                            onclick="changeStation(11)"
+                            >淮海11</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="javascript:;"
+                            data-date=""
+                            onclick="changeStation(12)"
+                            >淮海12</a
+                          >
+                        </li>
+                      </ul>
+                      <span class="filling-line" aria-hidden="true"></span>
+                    </div>
+                  </div>
+                  <ul class="cd-timeline-navigation list-unstyled mb-0">
+                    <li>
+                      <button class="">
+                        <i class="iconfont icon1">&#xe658;</i>
+                        <i class="iconfont icon2">&#xe669;</i>
+                      </button>
+                      <a href="javascript:;" class="prev inactive"> Prev</a>
+                    </li>
+                    <li><a href="javascript:;" class="next">Next</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- right -->
+        <div class="col-3 content-right tab h-100">
+          <div class="row h-100">
+            <div class="col-12 pt-4 px-3 h-100">
+              <ul
+                class="nav nav-tabs nav-justified border-bottom-0"
+                id="myTab"
+                role="tablist"
+              >
+                <li class="nav-item">
+                  <a
+                    class="nav-link active bg-transparent pb-3"
+                    id="home-tab"
+                    data-toggle="tab"
+                    href="#home"
+                    role="tab"
+                    aria-controls="home"
+                    aria-selected="true"
+                    ><span class="two-classify first-classify pb-2"
+                      >未处理</span
+                    >
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link bg-transparent pb-3"
+                    id="profile-tab"
+                    data-toggle="tab"
+                    href="#profile"
+                    role="tab"
+                    aria-controls="profile"
+                    aria-selected="false"
+                    ><span class="two-classify second-classify pb-2"
+                      >已处理</span
+                    ></a
+                  >
+                </li>
+              </ul>
+              <div class="tab-content" id="myTabContent">
+                <!-- 未处理 -->
+                <div
+                  class="tab-pane fade show active w-100 h-100 overflow-auto"
+                  id="home"
+                  role="tabpanel"
+                  aria-labelledby="home-tab"
+                >
+                  <ul class="list-group w-100">
+                    <!-- <li class="list-group-item bg-transparent">
+                                            <a href="" class="d-block">
+                                                <div class="info p-4 pl-5">
+                                                    <p>报警机构：<span class="name">悦华安养洪武中心1</span></p>
+                                                    <p>报警类型：<span class="px-3 py-1 type">用电</span></p>
+                                                    <p>警情级别：<span class="level">一级</span></p>
+                                                    <p>报警时间：<span class="time">2020-03-12 15:30:25</span></p>
+                                                </div>
+                                            </a>
+                                            <div class="handle-detail text-center py-4">
+                                                <button class="btn bg-transparent text-primary px-4 li_btn">处理</button>
+                                                &emsp;&emsp; <button class="btn text-white px-4 detail">详情</span>
+                                            </div>
+                                        </li> -->
+                  </ul>
+                </div>
+                <!-- 已处理 -->
+                <div
+                  class="tab-pane fade w-100 h-100 overflow-auto"
+                  id="profile"
+                  role="tabpanel"
+                  aria-labelledby="profile-tab"
+                >
+                  <ul class="list-group w-100"></ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- import bootstrap js -->
+    <script src="../static/js/jquery-3.4.1.min.js"></script>
+    <script src="../static/js/bootstrap.bundle.min.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
+    <script src="../static/js/bootstrap-table.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="../static/js/echarts.min.js"></script>
+    <!-- timeline.js -->
+    <script src="../static/js/modernizr.js"></script>
+    <script src="../static/js/timeline-main.js"></script>
+    <!-- common js -->
+    <script src="../static/js/common.js"></script>
+    <script>
+      
+    </script>
+  </body>
+</html>

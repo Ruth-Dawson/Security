@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <!-- 页面缩放                          设备宽度     设置页面的初始缩放值 是否允许用户进行缩放 -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- 删除苹果默认的工具栏和菜单栏 -->
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <!-- 苹果工具栏颜色 -->
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <!-- X-UA-Compatible 指定网页的兼容性模式设置IE8以下不识别 以IE的最高版本来显示 chrome=1 如果有chrome的话优先展示chrome 360 -->
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <!-- 指定双核浏览器默认以何种方式渲染页面[webkit]极速核[ie-comp]ie兼容内核[ie-stand]ie标准内核 -->
+        <meta name="renderer" content="webkit">
+        <link rel="stylesheet" href="../static/css/normalize.css">
+        <link rel="stylesheet" href="../static/css/font.css">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../static/css/bootstrap-table.min.css">
+        <link rel="stylesheet" href="../static/css/common.css">
+        <link rel="stylesheet" href="../static/css/reportor.css">
+        <title>享清福安全监管</title>
+    </head>
+
+    <body>
+        <div id="overview" class="container-fluid h-100">
+            <!-- content -->
+            <div class="row content-iframe h-100">
+                <!-- right -->
+                <div class="col-12 content-right h-100">
+                    <div class="row h-100">
+                        <!-- content-right-left -->
+                        <div class="col-7 left h-100">
+                            <!--报警统计-->
+                            <div class="row alarm-statistics">
+                                <div class="col-12 w-100">
+                                    <div class="row title-row">
+                                        <div class="col-12 w-100">
+                                            <span class="title-span pb-2">报警统计</span>
+                                        </div>
+                                    </div>
+                                    <div class="row content-row">
+                                        <div class="col-3">
+                                            <div class="alarm-data-area">
+                                                <div class="alarm-data-title"><span>报警总数</span></div>
+                                                <div class="alarm-data-value"><span>123</span></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-3">
+                                            <div class="alarm-data-area">
+                                                <div class="alarm-data-title"><span>报警组织</span></div>
+                                                <div class="alarm-data-value"><span>18</span></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-3">
+                                            <div class="alarm-data-area">
+                                                <div class="alarm-data-title"><span>待处理</span></div>
+                                                <div class="alarm-data-value"><span>11</span></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-3">
+                                            <div class="alarm-data-area">
+                                                <div class="alarm-data-title"><span>已完成</span></div>
+                                                <div class="alarm-data-value"><span>112</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--安全趋势-->
+                            <div class="row security-trend">
+                                <div class="col-12">
+                                    <div class="row title-row">
+                                        <div class="col-6 d-flex align-items-center">
+                                            <span class="title-span pb-2">安全趋势</span>
+                                        </div>
+                                        <div class="col-6">
+                                        </div>
+                                    </div>
+                                    <div class="row content-row">
+                                        <div class="col-12">
+                                            <div class="echarts-div w-100 h-100" id="security-trend-echarts">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--实时报警-->
+                            <div class="row real-time-alarm">
+                                <div class="col-12 h-100">
+                                    <div class="row title-row">
+                                        <div class="col-12 d-flex align-items-center">
+                                            <span class="title-span pb-2">实时报警</span>
+                                        </div>
+                                    </div>
+                                    <div class="row content-row">
+                                        <div class="col-12 h-100 text-center" id="security_table_container">
+                                            <table id="security_table" data-toggle="table"
+                                                data-classes="table table-striped table-dark table-bordered text-nowrap"
+                                                data-virtual-scroll="true">
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- content-right-right -->
+                        <div class="col-5 right h-100">
+                            <!--组织安全排名-->
+                            <div class="row org-rank h-50">
+                                <div class="col-12 h-100">
+                                    <div class="row title-row">
+                                        <div class="col-12">
+                                            <span class="title-span pb-2">组织安全排名</span>
+                                        </div>
+                                    </div>
+                                    <div class="row content-row">
+                                        <div class="col-12 h-100">
+                                            <div class="echarts-div p-3 h-100 text-center" id="org_table_container">
+                                                <table id="org_table" data-toggle="table"
+                                                    data-classes="table table-bordered table-hover table-striped table-dark text-nowrap"
+                                                    data-height="" data-virtual-scroll="true"></table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--报警类型-->
+                            <div class="row alarm-type h-50">
+                                <div class="col-12">
+                                    <div class="row title-row">
+                                        <div class="col-12 d-flex align-items-center">
+                                            <span class="title-span pb-2">报警类型</span>
+                                        </div>
+                                    </div>
+                                    <div class="row content-row">
+                                        <div class="col-12 h-100">
+                                            <div class="echarts-div w-100 h-100" id="alarm-type-echarts"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- import bootstrap -->
+        <script src="../static/js/jquery-3.4.1.min.js"></script>
+        <script src="../static/js/bootstrap.bundle.min.js"></script>
+        <script src="../static/js/bootstrap.min.js"></script>
+        <!-- import bootstrap-table -->
+        <script src="../static/js/bootstrap-table.min.js"></script>
+        <script src="../static/js/bootstrapTable.js"></script>
+        <!-- import echarts -->
+        <script src="../static/js/echarts.min.js"></script>
+        <!-- import common -->
+        <script src="../static/js/common.js"></script>
+        <script>
+            // ---------------------数据报表——reportor_overview_iframe.html--------
+            // echarts-------安全趋势
+            var securityTrendEcharts = echarts.init(document.getElementById('security-trend-echarts'));
+            var xAxisData = [];
+            var data1 = [];
+            var data2 = [];
+            for (let i = 15; i < 100; i++) {
+                xAxisData.push('类目' + i);
+                data1.push((Math.sin(i / 5) * (i / 5 - 10) + i / 6) * 5);
+                data2.push((Math.cos(i / 5) * (i / 5 - 10) + i / 6) * 5);
+            }
+            var securityTrendOption = {
+                title: {},
+                // legend:{},
+                tooltip: {},
+                xAxis: {
+                    show: true,
+                    data: xAxisData,
+                    axisLine: {
+                        lineStyle: {
+                            color: 'LightSlateGray'
+                        }
+                    }
+                },
+                yAxis: {
+                    axisLine: {
+                        lineStyle: {
+                            color: 'LightSlateGray'
+                        }
+                    },
+                    splitLine: {
+                        lineStyle: {
+                            color: '#353f47'
+                        }
+                    }
+                },
+                grid: {
+                    left: '5%',
+                    bottom: '8%',
+                    right: '5%',
+                    top: '10%'
+                },
+                series: [
+                    {
+                        name: 'bar',
+                        type: 'bar',
+                        data: data1,
+                        animationDelay: function (idx) {
+                            return idx * 10;
+                        },
+                        itemStyle: {
+                            color: '#fbd55b'
+                        }
+                    },
+                    {
+                        name: 'bar2',
+                        type: 'bar',
+                        data: data2,
+                        animationDelay: function (idx) {
+                            return idx * 10 + 100;
+                        },
+                        itemStyle: {
+                            color: '#359cd2'
+                        }
+                    }
+                ],
+                animationEasing: 'elasticout',
+                animationDelayUpdate: function (idx) {
+                    return idx * 5;
+                }
+            }
+            securityTrendEcharts.setOption(securityTrendOption);
+
+
+            //echarts-------报警类型
+            var alarmTypeEcharts = echarts.init(document.getElementById('alarm-type-echarts'));
+            var dataType = [14, 12, 10, 9, 6, 6, 3, 2];
+            var yMax = 15;
+            var dataShadow = [];
+            for (let i = 0; i < dataType.length; i++) {
+                dataShadow.push(yMax);
+            }
+            var alarmTypeOption = {
+                title: {},
+                tooltip: {},
+                grid: {
+                    left: '15%',
+                    bottom: '5%',
+                    top: '5%',
+                    right: '5%'
+                },
+                xAxis: {
+                    show: false,
+                    splitLine: {
+                        show: false
+                    },
+                },
+                yAxis: {
+                    axisLine: {
+                        show: false
+                    },
+                    axisLabel: {
+                        color: '#dededf',
+                    },
+                    axisTick: {
+                        show: false
+                    },
+                    inverse: true,
+                    type: 'category',
+                    data: ['消防系统', '用电检测', '燃气报警', '离床检测', '空气检测', '噪声检测', '翻身检测', '环境安全']
+                },
+                series: [
+                    {
+                        type: 'bar',
+                        barWidth: "55%",
+                        itemStyle: {
+                            color: '#444550'
+                        },
+                        barGap: '-100%',
+                        barCategoryGap: '40%',
+                        silent: true,
+                        data: dataShadow,
+                        animation: false
+                    },
+                    {
+                        name: '',
+                        type: 'bar',
+                        barWidth: "55%",
+                        itemStyle: {
+                            color: function (params) {
+                                var colorList = ['#df5900', '#862d00', '#4e4e75', '#4e754e', '#274e75', '#9c4e75', '#66ffcc', '#006666'];
+                                return colorList[params.dataIndex]
+                            }
+                        },
+                        label: {
+                            show: true,
+                            position: 'right',
+                            color: '#dededf'
+                        },
+                        data: dataType,
+                        animation: false
+                    }
+                ]
+            }
+            alarmTypeEcharts.setOption(alarmTypeOption);
+        </script>
+    </body>
+
+</html>

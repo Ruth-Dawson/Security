@@ -1,0 +1,315 @@
+html,
+body {
+  height: 100%;
+  font-size: 62.5%;
+  font-family: "Microsoft YaHei", "Sans-serif";
+}
+
+/* bootstrap间隙沟槽消除 */
+.no-gutters {
+  padding-left: 0;
+  padding-right: 0;
+}
+/* 垂直居中 父容器*/
+.vertical_align {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.header {
+  height: 7%;
+  background-color: #000000;
+}
+
+.content {
+  height: 93%;
+  background-color: #161616;
+}
+
+.content-iframe {
+  background-color: #161616;
+}
+
+/* ---------------------header-------------------- */
+
+.header-name {
+  color: #ff571a;
+  font-weight: 600;
+  font-size: 3rem;
+}
+
+.header .right_menu {
+  margin: 0;
+  height: 100%;
+  /* white-space: nowrap; 解决由于inline-block引起的换行问题 */
+}
+
+.header .right_menu .list-inline-item {
+  width: 50%;
+  height: 100%;
+  margin: 0;
+}
+
+.header .right_menu a:hover {
+  text-decoration: none;
+}
+
+.header .right_menu .list-inline-item .li-menu {
+  display: -webkit-box;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding-left: 5%;
+  padding-right: 5%;
+  font-size: 2rem;
+  color: #fff;
+}
+
+.header .right_menu .list-inline-item .li-menu .iconfont {
+  font-size: 2.3rem;
+  margin-right: 6%;
+  color: #ff6600;
+}
+
+.header .right_menu .list-inline-item:hover .iconfont {
+  color: #fff;
+}
+
+.header .right_menu .list-inline-item:hover {
+  background-color: #ff6600;
+}
+
+.header .right_menu .list-inline-item:hover .ic-contain {
+  /* background-color: rgba(128,128,128,0.5); */
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+.header .right_menu .list-inline-item.active {
+  background-color: #ff6600;
+}
+
+.header .right_menu .list-inline-item.active .ic-contain {
+  /* background-color: rgba(128,128,128,0.5); */
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+.header .right_menu .ic-contain {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  margin-left: 7%;
+  margin-right: 7%;
+}
+
+.header .right_menu .list-inline-item.active .iconfont {
+  /* background-color: #ff6600; */
+  color: #fff;
+}
+
+.header-left {
+  -webkit-box-flex: 0;
+  flex: 0 0 78%;
+  max-width: 78%;
+}
+
+.header-right {
+  -webkit-box-flex: 0;
+  flex: 0 0 22%;
+  max-width: 22%;
+}
+
+#data_reportor_container .content {
+  border-top: 2px solid #63410f;
+  padding-top: 0.5%;
+}
+
+/* -------------------------left--------------------------- */
+/* ----------左侧tab------------- */
+#data_reportor_container .content-left {
+  background-color: #1a1e29;
+  max-width: 18%;
+  -webkit-box-flex: 0;
+  flex: 0 0 18%;
+}
+
+#data_reportor_container .content-right {
+  max-width: 82%;
+  -webkit-box-flex: 0;
+  flex: 0 0 82%;
+}
+
+/* ---------left-top-------------- */
+.content-left .org_list_title {
+  height: 7%;
+  /* padding: 6% 0; */
+  background-color: #3c3f47;
+}
+
+.content-left .org_list_title .org_list_name {
+  color: #339966;
+  font-weight: 600;
+}
+
+/* ---------left-top-------------- */
+.content-left .org_list {
+  /* border: 1px solid blue; */
+  height: 93%;
+}
+
+.content-left .org_list_contain {
+  padding: 3% 4% 0 2%;
+}
+
+#orgAccordion .card {
+  position: relative;
+  border-radius: 0;
+  background-color: transparent;
+  border: none;
+  /* margin-top: 5px; */
+}
+
+#orgAccordion .card .btn {
+  padding: 0 12% 0 7%;
+  /* border: 1px solid yellow; */
+}
+
+#orgAccordion .card .btn span {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #e4e4e4;
+}
+
+#orgAccordion .card .btn .iconfont {
+  display: none;
+}
+
+#orgAccordion .card .card-header {
+  position: relative;
+  padding: 1rem 1.25rem;
+  margin-bottom: 0px;
+  border-bottom: none;
+}
+
+#orgAccordion {
+  background-color: transparent;
+  border-color: transparent;
+}
+
+#orgAccordion .card .card-header .list_line {
+  position: absolute;
+  width: 90%;
+  bottom: 0px;
+  height: 1px;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#59595a),
+    color-stop(#59595a),
+    to(#59595a)
+  );
+  background-image: linear-gradient(#59595a, #59595a, #59595a);
+}
+#orgAccordion .card .card-body {
+  overflow-y: auto;
+  max-height: 480px;
+  padding: 0;
+}
+
+/* 组织列表滚动条样式 -webkit支持*/
+#orgAccordion .card .card-body::-webkit-scrollbar {
+  width: 2px;
+}
+
+#orgAccordion .card .card-body::-webkit-scrollbar-thumb {
+  width: 5px;
+  height: 10px;
+  background-color: #708090;
+  visibility: hidden;
+}
+
+#orgAccordion .card .card-body:hover::-webkit-scrollbar-thumb {
+  visibility: visible;
+}
+
+#orgAccordion .card .card-body::-webkit-scrollbar-track-piece {
+  width: 5px;
+  background-color: #1a1e29;
+}
+
+#orgAccordion .card .card-body li {
+  height: 80px;
+  color: #dadadb;
+}
+
+#orgAccordion .card .card-body li:hover {
+  background-color: #132439;
+  border: 0.5px solid #32353d;
+}
+
+#orgAccordion .card .card-body li:hover .sec_line {
+  border: none;
+}
+
+/* 最后一个机构不显示 */
+#orgAccordion .card .card-body li:last-child .sec_line {
+  border: none;
+}
+
+#orgAccordion .card .card-body li a {
+  padding: 2% 4% 0% 9%;
+  color: #e4e4e4;
+}
+
+#orgAccordion .card .card-body li .sec_line {
+  width: 96%;
+  border-bottom: 1px solid #4e4e4e;
+}
+
+#orgAccordion .card .card-body li:hover a {
+  color: #f69502;
+}
+
+.security .sec_left {
+  width: 20%;
+  padding-bottom: 2%;
+}
+
+.security .sec_left img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.security .sec_right {
+  width: 79%;
+  padding: 2% 0;
+}
+
+.security .sec_right .org_name {
+  font-size: 1.65rem;
+}
+
+.security .sec_right p {
+  color: #8a8a8a;
+  margin-top: 6%;
+  padding-left: 5%;
+}
+
+.security .sec_right p span {
+  margin-right: 6%;
+  margin-left: 2%;
+  font-size: 1.3rem;
+}

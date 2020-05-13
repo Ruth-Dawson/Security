@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- 网站编码格式 -->
+    <meta charset="UTF-8" />
+    <!-- 页面缩放                          设备宽度     设置页面的初始缩放值 是否允许用户进行缩放 -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0,user-scalable=0"
+    />
+    <!-- 删除苹果默认的工具栏和菜单栏 -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <!-- 苹果工具栏颜色 -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <!-- X-UA-Compatible 指定网页的兼容性模式设置IE8以下不识别 以IE的最高版本来显示 chrome=1 如果有chrome的话优先展示chrome 360 -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- 指定双核浏览器默认以何种方式渲染页面[webkit]极速核[ie-comp]ie兼容内核[ie-stand]ie标准内核 -->
+    <meta name="renderer" content="webkit" />
+    <link rel="stylesheet" href="../static/css/normalize.css" />
+    <link rel="stylesheet" href="../static/css/font.css" />
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../static/css/bootstrap-table.min.css" />
+    <link rel="stylesheet" href="../static/css/easyui.css" />
+    <link rel="stylesheet" href="../static/css/common.css" />
+    <link rel="stylesheet" href="../static/css/reportor.css" />
+    <title>享清福安全监管</title>
+  </head>
+
+  <body>
+    <div id="frame_security_main" class="container-fluid h-100">
+      <!-- content -->
+      <div class="row content-iframe h-100">
+        <!-- content-iframe-right -->
+        <div class="col-12 content-iframe-right">
+          <div class="content-iframe-right-top">
+            <div class="row h-100 w-100 mr-0 ml-0">
+              <div class="col-9 left h-100">
+                <input
+                  type="text"
+                  class="easyui-datebox"
+                  id="datebox-one"
+                  shareCalendar="#sc"
+                />&emsp; <span class="dao">到</span>&emsp;
+                <input
+                  type="text"
+                  class="easyui-datebox"
+                  id="datebox-two"
+                  shareCalendar="#sc"
+                />&emsp;&emsp;
+                <button id="search" type="button" class="btn btn-primary">
+                  查询
+                </button>
+                <!-- <div id="sc" class="easyui-calendar"></div> -->
+                <!-- <a id="btn" href="#" class="easyui-linkbutton" data-options="iconCls:'icon-search'">查询</a> -->
+              </div>
+              <div class="col-3 right h-100">
+                <button
+                  class="float-right report"
+                  data-toggle="modal"
+                  data-target="#reportModal"
+                >
+                  <span class="iconfont mr-2">&#xe650;</span>安全月报
+                </button>
+                <div
+                  class="modal fade"
+                  id="reportModal"
+                  tabindex="-1"
+                  role="dialog"
+                  aria-labelledby="reportModalTitle"
+                  aria-hidden="true"
+                >
+                  <div
+                    class="modal-dialog modal-dialog-centered modal-lg"
+                    role="document"
+                  >
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="reportModalTitle">
+                          安全月报
+                        </h5>
+                        <button
+                          type="button"
+                          class="close"
+                          data-dismiss="modal"
+                          aria-label="Close"
+                        >
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <table></table>
+                      </div>
+                      <div class="modal-footer">
+                        <button
+                          type="button"
+                          class="btn btn-secondary"
+                          data-dismiss="modal"
+                        >
+                          Close
+                        </button>
+                        <button type="button" class="btn btn-primary">
+                          Save changes
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content-iframe-right-bottom w-100">
+            <div class="row h-100 ml-0 mr-0">
+              <div class="col-7 left no-gutters">
+                <div class="row top mr-0 ml-0">
+                  <div class="col-12 line text-center">
+                    <span class="span-border span1"></span>
+                    <span class="span-border span2"></span>
+                    <span class="span-border span3"></span>
+                    <span class="span-border span4"></span>
+                    <span class="span-border-sub span-sub-1"></span>
+                    <span class="span-border-sub span-sub-2"></span>
+                    <span class="span-border-sub span-sub-3"></span>
+                    <span class="span-border-sub span-sub-4"></span>
+                    <div class="sub_div h-100 float-left">
+                      <h2 class="mt-4 title">报警总数</h2>
+                      <h1 class="mt-4 font-weight-bold number">12</h1>
+                    </div>
+                    <div class="sub_div h-100 float-left">
+                      <h2 class="mt-4 title">今日报警数</h2>
+                      <h1 class="mt-4 font-weight-bold number">1</h1>
+                    </div>
+                    <div class="sub_div h-100 float-left">
+                      <h2 class="mt-4 title">待处理</h2>
+                      <h1 class="mt-4 font-weight-bold number">0</h1>
+                    </div>
+                    <div class="sub_div h-100 float-left">
+                      <h2 class="mt-4 title">已处理</h2>
+                      <h1 class="mt-4 font-weight-bold number">0</h1>
+                    </div>
+                    <div class="sub_div h-100 float-left">
+                      <h2 class="mt-4 title">监管设备总数</h2>
+                      <h1 class="mt-4 font-weight-bold number">27</h1>
+                    </div>
+                  </div>
+                </div>
+                <div class="row middle mr-0 ml-0">
+                  <div class="col-12 line no-gutters">
+                    <span class="span-border span1"></span>
+                    <span class="span-border span2"></span>
+                    <span class="span-border span3"></span>
+                    <span class="span-border span4"></span>
+                    <span class="span-border-sub span-sub-1"></span>
+                    <span class="span-border-sub span-sub-2"></span>
+                    <span class="span-border-sub span-sub-3"></span>
+                    <span class="span-border-sub span-sub-4"></span>
+                  </div>
+                </div>
+                <div class="row bottom mr-0 ml-0">
+                  <div class="col-12 line h-100">
+                    <span class="span-border span1"></span>
+                    <span class="span-border span2"></span>
+                    <span class="span-border span3"></span>
+                    <span class="span-border span4"></span>
+                    <span class="span-border-sub span-sub-1"></span>
+                    <span class="span-border-sub span-sub-2"></span>
+                    <span class="span-border-sub span-sub-3"></span>
+                    <span class="span-border-sub span-sub-4"></span>
+                    <div class="row title-row">
+                      <div class="col-12">
+                        <span class="text-center title">实时报警</span>
+                      </div>
+                    </div>
+                    <div class="row content-row">
+                      <div
+                        class="col-12 h-100 no-gutters text-center"
+                        id="table_con"
+                      >
+                        <table
+                          id="sub_security_table"
+                          data-toggle="table"
+                          data-height=""
+                          data-classes="table table-bordered table-striped table-dark text-nowrap"
+                          data-virtual-scroll="true"
+                        ></table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-5 right no-gutters">
+                <div class="row top mr-0 ml-0">
+                  <div class="col-12 line">
+                    <span class="span-border span1"></span>
+                    <span class="span-border span2"></span>
+                    <span class="span-border span3"></span>
+                    <span class="span-border span4"></span>
+                    <span class="span-border-sub span-sub-1"></span>
+                    <span class="span-border-sub span-sub-2"></span>
+                    <span class="span-border-sub span-sub-3"></span>
+                    <span class="span-border-sub span-sub-4"></span>
+                    <div class="tit_con pt-2">
+                      <h2 class="text-center title">安全趋势</h2>
+                    </div>
+                    <div class="security_trend w-100" id="security"></div>
+                  </div>
+                </div>
+                <div class="row middle mr-0 ml-0">
+                  <div class="col-12 line">
+                    <span class="span-border span1"></span>
+                    <span class="span-border span2"></span>
+                    <span class="span-border span3"></span>
+                    <span class="span-border span4"></span>
+                    <span class="span-border-sub span-sub-1"></span>
+                    <span class="span-border-sub span-sub-2"></span>
+                    <span class="span-border-sub span-sub-3"></span>
+                    <span class="span-border-sub span-sub-4"></span>
+                    <div class="tit_con pt-2">
+                      <h2 class="text-center title">分类排行</h2>
+                    </div>
+                    <div class="classify w-100" id="classify"></div>
+                  </div>
+                </div>
+                <div class="row bottom mr-0 ml-0">
+                  <div class="col-12 line">
+                    <span class="span-border span1"></span>
+                    <span class="span-border span2"></span>
+                    <span class="span-border span3"></span>
+                    <span class="span-border span4"></span>
+                    <span class="span-border-sub span-sub-1"></span>
+                    <span class="span-border-sub span-sub-2"></span>
+                    <span class="span-border-sub span-sub-3"></span>
+                    <span class="span-border-sub span-sub-4"></span>
+                    <div class="tit_con pt-2">
+                      <h2 class="text-center title">视频监控</h2>
+                    </div>
+                    <div class="monitoring w-100">
+                      <div class="row w-100 h-100 ml-0">
+                        <div class="col-6 py-2">
+                          <div class="vedio-container h-100">
+                            <div class="vedio-name w-100 text-center">
+                              <h2>大门口</h2>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-6 py-2">
+                          <div class="vedio-container h-100">
+                            <div class="vedio-name w-100 text-center">
+                              <h2>大门口</h2>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-6 py-2">
+                          <div class="vedio-container h-100">
+                            <div class="vedio-name w-100 text-center">
+                              <h2>大门口</h2>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-6 py-2">
+                          <div class="vedio-container h-100">
+                            <div class="vedio-name w-100 text-center">
+                              <h2>大门口</h2>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- import bootstrap -->
+    <script src="../static/js/jquery-3.4.1.min.js"></script>
+    <!-- <script src="../static/js/bootstrap.bundle.min.js"></script> -->
+    <script src="../static/js/bootstrap.min.js"></script>
+    <!-- import bootstrap-table -->
+    <script src="../static/js/bootstrap-table.min.js"></script>
+    <script src="../static/js/bootstrapTable.js"></script>
+    <!-- import easyui -->
+    <script src="../static/js/jquery.easyui.min.js"></script>
+    <!-- import echarts -->
+    <script src="../static/js/echarts.min.js"></script>
+    <!-- import common js -->
+    <script src="../static/js/common.js"></script>
+    <script>
+      $(function() {
+        // 设置calendar宽度
+        // var calendarWidth=$("#datebox-one").width();
+
+        var reg = new RegExp(/\d+/gi);
+        var id = location.search.match(reg);
+        console.log("id:"+id);
+
+        $("#datebox-one").datebox({
+          formatter: function(date) {
+            var y = date.getFullYear();
+            var m = date.getMonth() + 1;
+            var d = date.getDate();
+            return y + "年" + m + "月" + d + "日";
+          },
+          parser: function(s) {}
+        });
+        $("#datebox-two").datebox({
+          // panelWidth:calendarWidth+50,
+          formatter: function(date) {
+            var y = date.getFullYear();
+            var m = date.getMonth() + 1;
+            var d = date.getDate();
+            return y + "年" + m + "月" + d + "日";
+          },
+          parser: function(s) {}
+        });
+      });
+
+      // 接收消息
+      window.addEventListener("message", function(e) {
+        // d = e.data;
+        console.log("子页面接收：" + e.data);
+      });
+
+      // ---------------------数据报表——reportor_iframe.html--------------
+      // ------------------------------------------安全趋势
+      var security = echarts.init(document.getElementById("security"));
+      var securityOption = {
+        // title: {
+        //     text: '堆叠区域图'
+        // },
+        tooltip: {
+          trigger: "axis",
+          axisPointer: {
+            type: "cross",
+            label: {
+              backgroundColor: "#6a7985"
+            }
+          }
+        },
+        toolbox: {
+          feature: {
+            saveAsImage: {}
+          }
+        },
+        grid: {
+          top: "5%",
+          left: "3%",
+          right: "4%",
+          bottom: "3%",
+          containLabel: true
+        },
+        xAxis: {
+          type: "category",
+          boundaryGap: false,
+          data: ["周一", "周二", "周三", "周四", "周五", "周六", "周日"]
+        },
+        yAxis: {
+          type: "value"
+        },
+        series: [
+          {
+            name: "邮件营销",
+            type: "line",
+            stack: "总量",
+            data: [120, 132, 101, 134, 90, 230, 210]
+          },
+          {
+            name: "联盟广告",
+            type: "line",
+            stack: "总量",
+            data: [220, 182, 191, 234, 290, 330, 310]
+          },
+          {
+            name: "视频广告",
+            type: "line",
+            stack: "总量",
+            data: [150, 232, 201, 154, 190, 330, 410]
+          },
+          {
+            name: "直接访问",
+            type: "line",
+            stack: "总量",
+            data: [320, 332, 301, 334, 390, 330, 320]
+          },
+          {
+            name: "搜索引擎",
+            type: "line",
+            stack: "总量",
+            data: [820, 932, 901, 934, 1290, 1330, 1320]
+          }
+        ]
+      };
+      security.setOption(securityOption);
+
+      // ------------------------------------------分类排行
+      var classify = echarts.init(document.getElementById("classify"));
+      var dataType = [14, 11, 10, 9, 6, 6, 3, 2];
+      var yMax = 16;
+      var dataShadow = [];
+      for (let i = 0; i < dataType.length; i++) {
+        dataShadow.push(yMax);
+      }
+      var classifyOption = {
+        title: {},
+        tooltip: {},
+        grid: {
+          left: "15%",
+          bottom: "5%",
+          top: "5%",
+          right: "5%"
+        },
+        xAxis: {
+          show: false,
+          splitLine: {
+            show: false
+          }
+        },
+        yAxis: {
+          axisLine: {
+            show: false
+          },
+          axisLabel: {
+            color: "#c0c0c0"
+          },
+          axisTick: {
+            show: false
+          },
+          inverse: true,
+          type: "category",
+          data: [
+            "消防系统",
+            "用电检测",
+            "燃气报警",
+            "离床检测",
+            "空气检测",
+            "噪声检测",
+            "翻身检测",
+            "环境安全"
+          ]
+        },
+        series: [
+          {
+            type: "bar",
+            itemStyle: {
+              color: "#263254"
+            },
+            barGap: "-100%",
+            barCategoryGap: "40%",
+            silent: true,
+            data: dataShadow,
+            animation: false
+          },
+          {
+            name: "2011",
+            type: "bar",
+            itemStyle: {
+              color: function(paras) {
+                var securityColors = [
+                  "#df5900",
+                  "#862d00",
+                  "#4e4e75",
+                  "#4e754e",
+                  "#274e75",
+                  "#9c4e75",
+                  "#66ffcc",
+                  "#006666"
+                ];
+                return securityColors[paras.dataIndex];
+              }
+            },
+            label: {
+              show: true,
+              position: "right",
+              color: "#dededf"
+            },
+            data: dataType,
+            animation: false
+          }
+        ]
+      };
+      classify.setOption(classifyOption);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,349 @@
+/* --------------------------安全监管首页------------------------------- */
+#security_iframe > .row {
+  padding-top: 1px;
+  padding: 0 15px;
+  background-color: #323232;
+}
+.content-left {
+  -webkit-box-flex: 0;
+  flex: 0 0 78%;
+  max-width: 78%;
+}
+.content-right {
+  -webkit-box-flex: 0;
+  flex: 0 0 22%;
+  max-width: 22%;
+}
+/* 公共类 */
+.border-line {
+  position: relative;
+  border: 1px solid #6f4f20;
+}
+.span-border {
+  position: absolute;
+  padding: 7px;
+  border-color: #ebbd05;
+  border-style: solid;
+}
+.span-border-1 {
+  border-width: 1px 0 0 1px;
+  left: -1px;
+  top: -1px;
+}
+.span-border-2 {
+  border-width: 1px 1px 0 0;
+  right: -1px;
+  top: -1px;
+}
+.span-border-3 {
+  border-width: 0 0 1px 1px;
+  left: -1px;
+  bottom: -1px;
+}
+.span-border-4 {
+  border-width: 0 1px 1px 0;
+  right: -1px;
+  bottom: -1px;
+}
+/* ---------------------content-left------------------- */
+.grap-iframe {
+  height: 86.7%;
+}
+.grap-stations {
+  height: 13.3%;
+}
+
+.grap-top {
+  height: 24%;
+  /* border: 1px solid red; */
+}
+.grap-bottom {
+  height: 76%;
+  /* border: 1px solid red; */
+}
+/* ------------grap-top--------- */
+.grap-top .monitoring {
+  /* border: 1px solid blue; */
+  width: 14.285%;
+  font-size: 1.4rem;
+}
+
+.grap-top .monitoring .moni-img {
+  background-color: #ff9900;
+}
+.grap-top .monitoring .moni-name {
+  color: #ff9900;
+  font-size: 1.6rem;
+}
+.grap-top .monitoring .moni-status {
+  color: #fff;
+  background-color: #33d167;
+}
+/* 声明三个类 用于报警时触发改变背景及文字样式 */
+.grap-top .monitoring.alarm .ripple {
+  border: 2px solid red;
+  -webkit-animation: alarm 1s;
+  animation: alarm 1s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+.grap-top .monitoring .ripple {
+  width: 86px;
+  height: 86px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+}
+.grap-top .monitoring.alarm .moni-img {
+  background-color: red;
+}
+.grap-top .monitoring.alarm .moni-name {
+  color: red;
+}
+.grap-top .monitoring.alarm .moni-status {
+  color: #fff;
+  background-color: red;
+}
+
+@-webkit-keyframes alarm {
+  /* from{
+        border-color: pink;
+    }to{
+        border-color: red;
+    } */
+  10%,
+  90% {
+    -webkit-transform: translate3d(-1px, 0, 0);
+    transform: translate3d(-1px, 0, 0);
+    -webkit-transform: rotateZ(15deg);
+    transform: rotateZ(15deg);
+  }
+  20%,
+  80% {
+    -webkit-transform: translate3d(+2px, 0, 0);
+    transform: translate3d(+2px, 0, 0);
+  }
+  30%,
+  70% {
+    -webkit-transform: translate3d(-4px, 0, 0);
+    transform: translate3d(-4px, 0, 0);
+  }
+  40%,
+  60% {
+    -webkit-transform: translate3d(+4px, 0, 0);
+    transform: translate3d(+4px, 0, 0);
+  }
+  50% {
+    -webkit-transform: translate3d(-4px, 0, 0);
+    transform: translate3d(-4px, 0, 0);
+  }
+}
+
+@keyframes alarm {
+  /* from{
+        border-color: pink;
+    }to{
+        border-color: red;
+    } */
+  10%,
+  90% {
+    -webkit-transform: translate3d(-1px, 0, 0);
+    transform: translate3d(-1px, 0, 0);
+    -webkit-transform: rotateZ(15deg);
+    transform: rotateZ(15deg);
+  }
+  20%,
+  80% {
+    -webkit-transform: translate3d(+2px, 0, 0);
+    transform: translate3d(+2px, 0, 0);
+  }
+  30%,
+  70% {
+    -webkit-transform: translate3d(-4px, 0, 0);
+    transform: translate3d(-4px, 0, 0);
+  }
+  40%,
+  60% {
+    -webkit-transform: translate3d(+4px, 0, 0);
+    transform: translate3d(+4px, 0, 0);
+  }
+  50% {
+    -webkit-transform: translate3d(-4px, 0, 0);
+    transform: translate3d(-4px, 0, 0);
+  }
+}
+/* ------------grap-bottom--------- */
+.grap-bottom .video-data .supervisory-control {
+  width: 38.5%;
+  /* border: 1px solid green; */
+  padding: 15px 7.5px 15px 15px;
+}
+
+.grap-bottom .video-data .supervisory-control .border-line {
+  background-color: #222222;
+}
+
+.supervisory-control .title {
+  height: 13%;
+  /* border: 1px solid blue; */
+}
+.supervisory-control .title .tit {
+  color: #a0a0a0;
+  font-weight: 600;
+}
+.supervisory-control .four-video {
+  height: 87%;
+  /* border: 1px solid blue; */
+}
+
+.supervisory-control .four-video .vid .hover-info {
+  position: absolute;
+  top: -31px;
+  left: 0;
+  right: 0;
+  height: 31px;
+  background-color: #7a7a29;
+  font-size: 1.6rem;
+  color: #fff;
+  -webkit-transition: top 0.5s ease-in-out;
+  transition: top 0.5s ease-in-out;
+}
+
+.supervisory-control .four-video .vid:hover .hover-info {
+  top: 0;
+}
+
+.grap-bottom .video-data .echart-data {
+  width: 61.5%;
+  /* border: 1px solid green; */
+  padding: 15px 15px 15px 7.5px;
+  /* background-color: #272727; */
+}
+
+/* 雷达效果 */
+.radar-line {
+  border-bottom: 3px solid #3e88f1;
+  height: calc(100% - 2px);
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(43%, rgba(0, 255, 51, 0)),
+    color-stop(211%, #3e88f1)
+  );
+  background: linear-gradient(180deg, rgba(0, 255, 51, 0) 43%, #3e88f1 211%);
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
+  -webkit-animation: radar 2s infinite;
+  animation: radar 2s infinite;
+  /* animation-timing-function: cubic-bezier(0.53,0,0.43,0.99); */
+  -webkit-animation-timing-function: ease;
+  animation-timing-function: ease;
+  -webkit-animation-delay: 1.4s;
+  animation-delay: 1.4s;
+}
+
+@-webkit-keyframes radar {
+  0% {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 0;
+  }
+}
+
+@keyframes radar {
+  0% {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 0;
+  }
+}
+/* ------时间线--------- */
+
+/* ----------------------content-right------------------- */
+/* 实时报警   表格滚动条样式 -webkit支持*/
+.tab .tab-pane::-webkit-scrollbar {
+  width: 1px;
+}
+.tab .tab-pane::-webkit-scrollbar-thumb {
+  width: 5px;
+  height: 10px;
+  background-color: #708090;
+  visibility: hidden;
+}
+.tab .tab-pane:hover::-webkit-scrollbar-thumb {
+  visibility: visible;
+}
+.tab .tab-pane::-webkit-scrollbar-track-piece {
+  width: 5px;
+  background-color: #1a1e29;
+}
+
+.tab {
+  /* border: 1px solid red; */
+  background-color: #000;
+}
+.tab .nav {
+  height: 8%;
+}
+.tab .tab-content {
+  height: 92%;
+}
+.tab .nav-link {
+  font-size: 2rem;
+  border: none;
+  font-weight: 600;
+}
+.tab .first-classify {
+  color: red;
+  border-bottom: 0px solid red;
+}
+.tab .second-classify {
+  color: #66ff66;
+  border-bottom: 0px solid #66ff66;
+}
+.tab .first-classify:hover,
+.tab .second-classify:hover,
+.tab .nav-item .active .two-classify {
+  border-width: 3px;
+}
+.tab .nav-link:hover {
+  border: none;
+}
+
+.tab-content a:hover {
+  text-decoration: none;
+}
+
+.tab-content .list-group-item .info {
+  background-color: #910000;
+  color: #fff;
+  font-size: 1.6rem;
+  border-radius: 10px;
+}
+.tab-content .list-group-item .info .type {
+  background-color: #775c7a;
+  border: 1px solid #b23e00;
+}
+
+.tab-content .list-group-item .handle-detail .btn {
+  border: 1px solid #6496c7;
+  border-radius: 13.5px;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+.tab-content .list-group-item .handle-detail .detail {
+  background-color: #343434;
+}

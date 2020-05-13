@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- 页面缩放                          设备宽度     设置页面的初始缩放值 是否允许用户进行缩放 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 删除苹果默认的工具栏和菜单栏 -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <!-- 苹果工具栏颜色 -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <!-- X-UA-Compatible 指定网页的兼容性模式设置IE8以下不识别 以IE的最高版本来显示 chrome=1 如果有chrome的话优先展示chrome 360 -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- 指定双核浏览器默认以何种方式渲染页面[webkit]极速核[ie-comp]ie兼容内核[ie-stand]ie标准内核 -->
+    <meta name="renderer" content="webkit" />
+    <link rel="stylesheet" href="../static/css/normalize.css" />
+    <link rel="stylesheet" href="../static/css/font.css" />
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../static/css/bootstrap-table.min.css" />
+    <!-- style css -->
+    <link rel="stylesheet" href="../static/css/common.css" />
+    <link rel="stylesheet" href="../static/css/security.css" />
+    <title>享清福安全监管</title>
+  </head>
+
+  <body>
+    <div id="security_iframe" class="container-fluid w-100 h-100">
+      <!-- content -->
+      <div class="row h-100">
+        <!-- left -->
+        <div class="col-12 grap h-100 no-gutters">
+          <div class="row grap-top">
+            <div class="monitoring d-flex align-items-center alarm">
+              <div class="mx-auto text-center ripple-container">
+                <!-- 内层 -->
+                <div class="ripple mx-auto">
+                  <img
+                    src="../static/img/icon01.png"
+                    class="moni-img img-fluid rounded-circle mx-auto ripple-triggle"
+                    alt="消防系统"
+                  />
+                </div>
+                <!-- </div> -->
+                <p><span class="moni-name">消防系统</span></p>
+                <p>
+                  <span class="moni-status badge badge-pill py-2 px-4"
+                    >正常</span
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="monitoring d-flex align-items-center alarm">
+              <div class="mx-auto text-center ripple-container">
+                <!-- 内层 -->
+                <div class="ripple mx-auto">
+                  <img
+                    src="../static/img/icon02.png"
+                    class="moni-img img-fluid rounded-circle mx-auto ripple-triggle"
+                    alt="消防系统"
+                  />
+                </div>
+                <!-- </div> -->
+                <p><span class="moni-name">用电监测</span></p>
+                <p>
+                  <span class="moni-status badge badge-pill py-2 px-4"
+                    >正常</span
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="monitoring d-flex align-items-center">
+              <div class="mx-auto text-center ripple-container">
+                <!-- 内层 -->
+                <div class="ripple mx-auto">
+                  <img
+                    src="../static/img/icon03.png"
+                    class="moni-img img-fluid rounded-circle mx-auto ripple-triggle"
+                    alt="消防系统"
+                  />
+                </div>
+                <!-- </div> -->
+                <p><span class="moni-name">燃气报警</span></p>
+                <p>
+                  <span class="moni-status badge badge-pill py-2 px-4"
+                    >正常</span
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="monitoring d-flex align-items-center">
+              <div class="mx-auto text-center ripple-container">
+                <!-- 内层 -->
+                <div class="ripple mx-auto">
+                  <img
+                    src="../static/img/icon04.png"
+                    class="moni-img img-fluid rounded-circle mx-auto ripple-triggle"
+                    alt="消防系统"
+                  />
+                </div>
+                <!-- </div> -->
+                <p><span class="moni-name">离床监测</span></p>
+                <p>
+                  <span class="moni-status badge badge-pill py-2 px-4"
+                    >正常</span
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="monitoring d-flex align-items-center">
+              <div class="mx-auto text-center ripple-container">
+                <!-- 内层 -->
+                <div class="ripple mx-auto">
+                  <img
+                    src="../static/img/icon05.png"
+                    class="moni-img img-fluid rounded-circle mx-auto ripple-triggle"
+                    alt="消防系统"
+                  />
+                </div>
+                <!-- </div> -->
+                <p><span class="moni-name">空气监测</span></p>
+                <p>
+                  <span class="moni-status badge badge-pill py-2 px-4"
+                    >正常</span
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="monitoring d-flex align-items-center alarm">
+              <div class="mx-auto text-center ripple-container">
+                <!-- 内层 -->
+                <div class="ripple mx-auto">
+                  <img
+                    src="../static/img/icon06.png"
+                    class="moni-img img-fluid rounded-circle mx-auto ripple-triggle"
+                    alt="消防系统"
+                  />
+                </div>
+                <!-- </div> -->
+                <p><span class="moni-name">噪声监测</span></p>
+                <p>
+                  <span class="moni-status badge badge-pill py-2 px-4"
+                    >正常</span
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="monitoring d-flex align-items-center">
+              <div class="mx-auto text-center ripple-container">
+                <!-- 内层 -->
+                <div class="ripple mx-auto">
+                  <img
+                    src="../static/img/icon07.png"
+                    class="moni-img img-fluid rounded-circle mx-auto ripple-triggle"
+                    alt="消防系统"
+                  />
+                </div>
+                <!-- </div> -->
+                <p><span class="moni-name">翻身监测</span></p>
+                <p>
+                  <span class="moni-status badge badge-pill py-2 px-4"
+                    >正常</span
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="row grap-bottom">
+            <div class="video-data w-100 h-100 clearfix">
+              <!-- 实时监控 -->
+              <div class="supervisory-control h-100 float-left">
+                <div class="border-line w-100 h-100">
+                  <span class="span-border span-border-1"></span>
+                  <span class="span-border span-border-2"></span>
+                  <span class="span-border span-border-3"></span>
+                  <span class="span-border span-border-4"></span>
+                  <div class="row title mx-0">
+                    <div class="col-12 d-flex align-items-center">
+                      <h2 class="tit">实时监管</h2>
+                    </div>
+                  </div>
+                  <div class="row four-video mx-0 pb-5">
+                    <div class="col-6 vid pb-2 pr-2">
+                      <div class="w-100 h-100 position-relative overflow-hidden border border-secondary">
+                        <div class="hover-info w-100">
+                          <p class="text-center mb-0">大门口</p>
+                        </div>
+                        <div class="radar-line position-absolute w-100" style="z-index: 10;">
+                        </div>
+                        <video src="../static/img/yuehua.mp4" class="w-100 h-100 position-relative" controls autoplay loop style="z-index: 999;"></video>
+                      </div>
+                    </div>
+                    <div class="col-6 vid pb-2 pl-2">
+                      <div
+                        class="w-100 h-100 position-relative overflow-hidden border border-secondary"
+                      >
+                        <div class="hover-info w-100">
+                          <p class="text-center mb-0">大门口</p>
+                        </div>
+                        <div class="radar-line position-absolute w-100" style="z-index: 999;"></div>
+                        <video src="../static/img/yuehua.mp4" class="w-100 h-100 position-relative" controls></video>
+
+                      </div>
+                    </div>
+                    <div class="col-6 vid pt-2 pr-2">
+                      <div
+                        class="w-100 h-100 position-relative overflow-hidden border border-secondary"
+                      >
+                        <div class="hover-info w-100">
+                          <p class="text-center mb-0">大门口</p>
+                        </div>
+                        <div class="radar-line position-absolute w-100"></div>
+                        <video src="../static/img/yuehua.mp4" class="w-100 h-100 position-relative" controls style="z-index: 999;"></video>
+
+                      </div>
+                    </div>
+                    <div class="col-6 vid pt-2 pl-2">
+                      <div
+                        class="w-100 h-100 position-relative overflow-hidden border border-secondary"
+                      >
+                        <div class="hover-info w-100">
+                          <p class="text-center mb-0">大门口</p>
+                        </div>
+                        <div class="radar-line position-absolute w-100"></div>
+                        <video src="../static/img/yuehua.mp4" class="w-100 h-100 position-relative" controls style="z-index: 999;"></video>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- 常量数据分析 -->
+              <div class="echart-data h-100 float-left">
+                <div class="border-line w-100 h-100">
+                  <span class="span-border span-border-1"></span>
+                  <span class="span-border span-border-2"></span>
+                  <span class="span-border span-border-3"></span>
+                  <span class="span-border span-border-4"></span>
+                  <div id="echart-data" class="w-100 h-100"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- import bootstrap js -->
+    <script src="../static/js/jquery-3.4.1.min.js"></script>
+    <script src="../static/js/bootstrap.bundle.min.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
+    <script src="../static/js/bootstrap-table.min.js"></script>
+    <script src="../static/js/echarts.min.js"></script>
+    <!-- Latest compiled and minified Locales -->
+    <!-- common js -->
+    <script src="../static/js/common.js"></script>
+    <script>
+      // ---------------------安全监管——security_iframe.html-----------------
+      // 1、echarts  常量数据分析
+      var echartData = echarts.init(document.getElementById("echart-data"));
+
+      var data1 = [],
+        data2 = [],
+        data3 = [],
+        data4 = [],
+        data5 = [];
+
+      var now = +new Date(2000, 0, 0);
+      var seven = +new Date(2000, 0, 7);
+      var oneDay = 24 * 3600 * 1000;
+
+      function randomData1(min, max) {
+        now = new Date(+now + oneDay);
+        return [
+          [now.getFullYear(), now.getMonth() + 1, now.getDate()].join("/"),
+          Math.round(Math.random() * (max - min + 1) + min)
+        ];
+      }
+
+      function pullData1(arg, min, max) {
+        for (let i = 0; i < 7; i++) {
+          arg.push(randomData1(min, max));
+        }
+        now = +new Date(2000, 0, 0);
+        return arg;
+      }
+
+      function pullData2(arr, min, max) {
+        var temp =seven + oneDay;
+        arr.push([
+          [
+            new Date(temp).getFullYear(),
+            new Date(temp).getMonth() + 1,
+            new Date(temp).getDate()
+          ].join("/"),
+          Math.round(Math.random() * (max - min + 1) + min)
+        ])
+        return arr;
+      }
+
+      // 初始化五类数据，now需要重置，以保证横坐标一致
+      data1 = pullData1(data1, 0, 1000);
+      data2 = pullData1(data2, 1000, 1500);
+      data3 = pullData1(data3, 1500, 2000);
+      data4 = pullData1(data4, 2000, 2500);
+      data5 = pullData1(data5, 2500, 3000);
+
+      //push新数据，now不需重置，日期应接连
+
+      var echartDataOpt = {
+        backgroundColor: "#222",
+        title: {
+          text: "常量数据分析",
+          top: "4%",
+          left: "4%",
+          textStyle: {
+            color: "#fff",
+            fontSize: 19
+          }
+        },
+        tooltip: {
+          trigger: "axis"
+        },
+        legend: {
+          textStyle: {
+            color: "#a0a0a0",
+            fontSize: 16
+          },
+          top: "4%",
+          right: "4%"
+        },
+        grid: {
+          top: "20%",
+          left: "3%",
+          right: "4%",
+          bottom: "3%",
+          containLabel: true
+        },
+        xAxis: {
+          type: "time",
+          splitLine: {
+            show: false
+          },
+          axisLabel: {
+            color: "#a0a0a0"
+          }
+        },
+        yAxis: {
+          type: "value",
+          boundaryGap: [0, "100%"],
+          splitLine: {
+            show: true,
+            lineStyle: {
+              type: "dotted",
+              color: "#a0a0a0"
+            }
+          },
+          nameTextStyle: {
+            color: "#a0a0a0"
+          },
+          axisLabel: {
+            color: "#a0a0a0"
+          }
+        },
+        series: [
+          {
+            name: "噪声检测",
+            type: "line",
+            showSymbol: false,
+            hoverAnimation: false,
+            data: data1
+          },
+          {
+            name: "翻身检测",
+            type: "line",
+            showSymbol: false,
+            hoverAnimation: false,
+            data: data2
+          },
+          {
+            name: "噪音检测",
+            type: "line",
+            showSymbol: false,
+            hoverAnimation: false,
+            data: data3
+          },
+          {
+            name: "空气检测",
+            type: "line",
+            showSymbol: false,
+            hoverAnimation: false,
+            data: data4
+          },
+          {
+            name: "离床检测",
+            type: "line",
+            showSymbol: false,
+            hoverAnimation: false,
+            data: data5
+          }
+        ]
+      };
+
+      setInterval(function() {
+        data1.shift();
+        data2.shift();
+        data3.shift();
+        data4.shift();
+        data5.shift();
+        data1 = pullData2(data1, 0, 1000);
+        data2 = pullData2(data2, 1000, 1500);
+        data3 = pullData2(data3, 1500, 2000);
+        data4 = pullData2(data4, 2000, 2500);
+        data5 = pullData2(data5, 2500, 3000);
+        seven+=oneDay;
+        echartData.setOption({
+          series: [
+            {
+              data: data1
+            },
+            {
+              data: data2
+            },
+            {
+              data: data3
+            },
+            {
+              data: data4
+            },
+            {
+              data: data5
+            }
+          ]
+        });
+      }, 1000);
+
+      echartData.setOption(echartDataOpt);
+
+      // 根据时间线加载不同的站点信息
+      var reg = new RegExp(/\d+/gi);
+      var id = window.location.search.match(reg);
+      //   id为数组字符串
+      console.log(id);
+    </script>
+  </body>
+</html>

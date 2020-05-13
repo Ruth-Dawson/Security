@@ -1,0 +1,493 @@
+/* -------------------------content-right------------------------------- */
+#security_main .content-right {
+  padding: 0.5% 15px;
+}
+.echarts-div {
+  width: 100%;
+  height: 95%;
+  border: 1px solid #736014;
+  background-color: #2b2c3a;
+}
+
+/* content-right left 百分比 */
+/* 报警统计 */
+.alarm-statistics {
+  height: 25%;
+}
+/* 安全趋势 */
+.security-trend {
+  height: 38%;
+  padding-bottom: 1%;
+}
+/* 实时报警 */
+.real-time-alarm {
+  height: 37%;
+}
+/* 实时警报 状态列 */
+.handled_bg {
+  background-color: #ff0000;
+  width: 78%;
+  padding: 3% 6%;
+}
+.unhandled_bg {
+  background-color: #339933;
+  width: 78%;
+  padding: 3% 6%;
+}
+
+/* -------报警统计 ----------*/
+.alarm-statistics .title-row {
+  height: 20%;
+}
+
+.alarm-statistics .content-row {
+  height: 80%;
+}
+
+.title-span {
+  border-bottom: 3px solid #44d7b6;
+  font-size: 1.8rem;
+  color: white;
+}
+
+.content-row .col-3 .alarm-data-area {
+  border: 1px solid #736014;
+  background-color: #2b2c3a;
+  width: 100%;
+  height: 90%;
+}
+
+.alarm-data-title {
+  color: #b1ad73;
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 15%;
+  font-weight: 600;
+}
+.alarm-statistics .content-row .col-3:not(:last-child) .alarm-data-value {
+  color: #ff6699;
+}
+.alarm-statistics .content-row .col-3:last-of-type .alarm-data-value {
+  color: #44d7b6;
+}
+.alarm-data-value {
+  font-size: 4.5rem;
+  text-align: center;
+  margin-top: 2%;
+  font-weight: 600;
+}
+
+/* -------安全趋势 ----------*/
+.security-trend .title-row {
+  height: 15%;
+}
+
+.security-trend .content-row {
+  height: 85%;
+}
+
+.real-time-alarm .title-row {
+  height: 15%;
+}
+
+.real-time-alarm .content-row {
+  height: 85%;
+}
+
+.org-rank .title-row {
+  height: 10%;
+}
+
+.org-rank .content-row {
+  height: 90%;
+}
+
+.alarm-type .title-row {
+  height: 13%;
+}
+
+.alarm-type .content-row {
+  height: 87%;
+}
+
+/* 实时报警表格 */
+.real-time-alarm .content-row .table {
+  font-size: 1.5rem;
+}
+.real-time-alarm .content-row .table thead {
+  background-color: #590000;
+}
+.real-time-alarm .content-row .table tbody tr:nth-of-type(odd) {
+  background-color: #000;
+}
+.real-time-alarm .content-row .table tbody tr:nth-of-type(even) {
+  background-color: #1a1e29;
+}
+.real-time-alarm .content-row .table tbody tr:hover {
+  background-color: #1a1e29;
+}
+.real-time-alarm .content-row .table tbody .tag_bg {
+  background-color: #c34e00;
+  border-radius: 10px;
+  width: 70%;
+}
+.real-time-alarm .content-row .table tbody .states_bg {
+  background-color: #ff0000;
+  width: 78%;
+  padding: 3%;
+}
+.bootstrap-table .fixed-table-container.fixed-height .fixed-table-border {
+  border: none;
+}
+.bootstrap-table .fixed-table-container.fixed-height:not(.has-footer) {
+  border: none;
+}
+
+/* 实时报警   表格滚动条样式 -webkit支持*/
+#security_table_container .fixed-table-body::-webkit-scrollbar {
+  width: 1px;
+}
+#security_table_container .fixed-table-body::-webkit-scrollbar-thumb {
+  width: 5px;
+  height: 10px;
+  background-color: #708090;
+  visibility: hidden;
+}
+#security_table_container .fixed-table-body:hover::-webkit-scrollbar-thumb {
+  visibility: visible;
+}
+#security_table_container .fixed-table-body::-webkit-scrollbar-track-piece {
+  width: 5px;
+  background-color: #1a1e29;
+}
+
+/* ------------------组织安全排名 -----------*/
+#org_table {
+  font-size: 1.5rem;
+}
+#org_table_container thead {
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+/* 组织排名   表格滚动条样式 -webkit支持*/
+#org_table_container .fixed-table-body::-webkit-scrollbar {
+  width: 1px;
+}
+#org_table_container .fixed-table-body::-webkit-scrollbar-thumb {
+  width: 5px;
+  height: 10px;
+  background-color: #708090;
+  visibility: hidden;
+}
+#org_table_container .fixed-table-body:hover::-webkit-scrollbar-thumb {
+  visibility: visible;
+}
+#org_table_container .fixed-table-body::-webkit-scrollbar-track-piece {
+  width: 5px;
+  background-color: #1a1e29;
+}
+/* 奇偶行变色 */
+#org_table_container .table-dark.table-striped tbody tr:nth-of-type(odd) {
+  background-color: #32394b;
+}
+#org_table_container .table-dark {
+  background-color: #2b2c3a;
+}
+
+/* ------------------------------reportor_iframe.html--------------------------------- */
+
+/* -------------------------content-right------------------------------- */
+.span-border,
+.span-border-sub {
+  position: absolute;
+  padding: 7px;
+  border-style: solid;
+  border-color: #c1bb90;
+}
+.span-border-sub {
+  padding: 4px;
+}
+.span1 {
+  top: -0.5px;
+  left: -0.5px;
+  border-width: 2px 0 0 2px;
+}
+.span2 {
+  top: -0.5px;
+  right: -0.5px;
+  border-width: 2px 2px 0 0;
+}
+.span3 {
+  bottom: -0.5px;
+  left: -0.5px;
+  border-width: 0 0 2px 2px;
+}
+.span4 {
+  bottom: -0.5px;
+  right: -0.5px;
+  border-width: 0 2px 2px 0;
+}
+.span-sub-1 {
+  top: 4px;
+  left: 4px;
+  border-width: 2px 0 0 2px;
+}
+.span-sub-2 {
+  top: 4px;
+  right: 4px;
+  border-width: 2px 2px 0 0;
+}
+.span-sub-3 {
+  bottom: 4px;
+  left: 4px;
+  border-width: 0 0 2px 2px;
+}
+.span-sub-4 {
+  bottom: 4px;
+  right: 4px;
+  border-width: 0 2px 2px 0;
+}
+
+.content-iframe-right-top {
+  height: 6.5%;
+}
+.content-iframe-right-bottom {
+  height: 93.5%;
+}
+
+/* 日期框 */
+#datebox-one,
+#datebox-two {
+  width: 15%;
+  z-index: 999;
+}
+/* 共享日历框 */
+/* #sc{
+    position: absolute;
+    left: 8.5%;
+    top: 80%;
+} */
+.content-iframe-right-top .left {
+  color: #dcdcdc;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+}
+.content-iframe-right-top .left .dao {
+  font-size: 18px;
+}
+.content-iframe-right-top .left .textbox {
+  background-color: #1a1a1a !important;
+  border-color: #767676;
+}
+.content-iframe-right-top .left .textbox-text {
+  background-color: #1a1a1a;
+  color: #fff;
+}
+.content-iframe-right-top .left .textbox-addon a {
+  background-color: transparent;
+  opacity: 1;
+}
+/* .content-iframe-right-top .left .textbox-addon a:hover{
+    background-color: #1a1a1a;
+} */
+#search {
+  border-radius: 1.25rem;
+  /* font-size: 1.5rem; */
+}
+
+.content-iframe-right-top .right {
+  position: relative;
+}
+.content-iframe-right-top .report {
+  font-size: 1.2rem;
+  color: #fff;
+  background-color: #66cc99;
+  border: none;
+  border-radius: 4px;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  padding: 1% 5% 1% 3%;
+}
+
+.content-iframe-right-bottom .left .line,
+.content-iframe-right-bottom .right .line {
+  border: 0.5px solid #81530f;
+}
+
+.content-iframe-right-bottom .left .row,
+.content-iframe-right-bottom .right .row {
+  padding: 5px 1%;
+}
+.content-iframe-right-bottom .left .top {
+  height: 16.8%;
+}
+.content-iframe-right-bottom .left .top .sub_div {
+  width: 20%;
+}
+.content-iframe-right-bottom .left .top .sub_div .title {
+  color: #b1ad73;
+  font-weight: 600;
+}
+.content-iframe-right-bottom .left .top .sub_div .number {
+  font-size: 4rem;
+}
+/* 范围选择器 */
+.content-iframe-right-bottom
+  .left
+  .top
+  .sub_div:nth-of-type(n + 1):nth-of-type(-n + 3)
+  .number {
+  color: #f00;
+}
+.content-iframe-right-bottom .left .top .sub_div:nth-of-type(4) .number {
+  color: #009966;
+}
+.content-iframe-right-bottom .left .top .sub_div:nth-of-type(5) .number {
+  color: #0099ff;
+}
+
+.content-iframe-right-bottom .left .middle {
+  height: 43.5%;
+}
+.content-iframe-right-bottom .left .middle .line {
+  padding: 0.5px;
+  background: url("../img/security_observe.png") no-repeat;
+  background-size: cover;
+}
+
+.title-row {
+  font-size: 2rem;
+  color: #fff;
+}
+
+/* 实时报警   表格滚动条样式 -webkit支持*/
+#table_con .fixed-table-body::-webkit-scrollbar {
+  width: 1px;
+}
+#table_con .fixed-table-body::-webkit-scrollbar-thumb {
+  width: 5px;
+  height: 10px;
+  background-color: #708090;
+  visibility: hidden;
+}
+#table_con .fixed-table-body:hover::-webkit-scrollbar-thumb {
+  visibility: visible;
+}
+#table_con .fixed-table-body::-webkit-scrollbar-track-piece {
+  width: 5px;
+  background-color: #1a1e29;
+}
+
+.bootstrap-table .fixed-table-container.fixed-height .fixed-table-border {
+  border: none;
+}
+.bootstrap-table .fixed-table-container.fixed-height:not(.has-footer) {
+  border: none;
+}
+
+.content-iframe-right-bottom .left .bottom {
+  height: 39.5%;
+}
+.content-iframe-right-bottom .left .bottom .title-row {
+  height: 13%;
+}
+.content-iframe-right-bottom .left .bottom .content-row {
+  height: 87%;
+}
+.content-iframe-right-bottom .left .bottom .title {
+  color: #fff;
+  position: relative;
+  bottom: 0;
+}
+.content-iframe-right-bottom .left .bottom .table {
+  font-size: 1.5rem;
+}
+.content-iframe-right-bottom .left .bottom .table thead {
+  background-color: #590000;
+}
+.content-iframe-right-bottom .left .bottom .table tbody tr:nth-of-type(odd) {
+  background-color: #000;
+}
+.content-iframe-right-bottom .left .bottom .table tbody tr:nth-of-type(even) {
+  background-color: #1a1e29;
+}
+.content-iframe-right-bottom .left .bottom .table tbody tr:hover {
+  background-color: #1a1e29;
+}
+
+.content-iframe-right-bottom .left .bottom .table tbody .tag_bg {
+  background-color: #c34e00;
+  border-radius: 10px;
+  width: 70%;
+}
+
+.content-iframe-right-bottom .right .top {
+  height: 25.5%;
+}
+.content-iframe-right-bottom .right .middle {
+  height: 34.5%;
+}
+.content-iframe-right-bottom .right .bottom {
+  height: 39.7%;
+}
+
+/* title */
+.content-iframe-right-bottom .right .title {
+  color: #fff;
+}
+.content-iframe-right-bottom .right .tit_con {
+  position: relative;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  align-items: center;
+  width: 20%;
+  /* border: 1px solid red; */
+}
+.content-iframe-right-bottom .right .top .tit_con {
+  height: 18%;
+}
+.content-iframe-right-bottom .right .middle .tit_con {
+  height: 14%;
+}
+.content-iframe-right-bottom .right .bottom .tit_con {
+  height: 14%;
+}
+
+.content-iframe-right-bottom .right .top .security_trend {
+  height: 82%;
+  /* border: 1px solid red; */
+}
+.content-iframe-right-bottom .right .middle .classify {
+  height: 86%;
+  /* border: 1px solid red; */
+}
+.content-iframe-right-bottom .right .bottom .monitoring {
+  height: 86%;
+}
+.content-iframe-right-bottom .monitoring .col-6 .vedio-container {
+  border: 1px solid lightgray;
+  position: relative;
+  overflow: hidden;
+}
+
+.vedio-name {
+  position: absolute;
+  top: -29px;
+  left: 0;
+  height: 29px;
+  color: #fff;
+  -webkit-transition: top 0.5s ease-in-out;
+  transition: top 0.5s ease-in-out;
+  background-color: #999933;
+}
+
+.content-iframe-right-bottom .monitoring .vedio-container:hover .vedio-name {
+  top: 0px;
+}
